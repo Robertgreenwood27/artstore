@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import {Alert, Container} from 'react-bootstrap'
+import {Container} from 'react-bootstrap'
 import Header from './components/Header'
 import TopFooter from './components/TopFooter'
 import Footer from './components/Footer'
@@ -28,11 +28,7 @@ import VendorEditScreen from './screens/VendorEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
 import ContactScreen from './screens/ContactScreen'
 import AboutScreen from './screens/AboutScreen'
-<<<<<<< HEAD
 
-=======
-import Temp from './components/Temp'
->>>>>>> origin/master
 
 const App = () => {
 	return (
@@ -42,10 +38,6 @@ const App = () => {
 
 				<main className=" maincontainer">
 					<Container>
-<<<<<<< HEAD
-=======
-						<Temp />
->>>>>>> origin/master
 						<Route path="/contact" component={ContactScreen} />
 						<Route path="/about" component={AboutScreen} />
 						<Route path="/order/:id" component={OrderScreen} />

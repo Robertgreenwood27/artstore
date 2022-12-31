@@ -24,19 +24,11 @@ const RenderCategories = () => {
 				<Message variant="danger">{error}</Message>
 			) : (
 				<>
-<<<<<<< HEAD
 				{/*	<Row style={{textAlign: 'center'}}>
 						 <Col>
 							<h1 style={{color: 'white'}}>Categories</h1>
 						</Col>
 			</Row> */}
-=======
-					<Row style={{textAlign: 'center'}}>
-						<Col>
-							<h1 style={{color: 'white'}}>Categories</h1>
-						</Col>
-					</Row>
->>>>>>> origin/master
 					<Row>
 						{categories.map((category) => (
 							<Col key={category._id} sm={12} md={6} lg={4} xl={3}>

@@ -19,11 +19,7 @@ const Header = () => {
 			<Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect fixed="top">
 				<Container>
 					<LinkContainer to="/">
-<<<<<<< HEAD
-						<Navbar.Brand>Robbie Greenwood</Navbar.Brand>
-=======
-						<Navbar.Brand>BEASTIES</Navbar.Brand>
->>>>>>> origin/master
+						<Navbar.Brand>Gallery</Navbar.Brand>
 					</LinkContainer>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
