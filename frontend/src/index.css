@@ -1,0 +1,103 @@
+main {
+	min-height: 100vh;
+}
+
+h3 {
+	padding: 1rem 0;
+}
+
+h1 {
+	font-size: 1.8rem;
+	padding: 1rem 0;
+}
+
+h2 {
+	font-size: 1.4rem;
+	padding: 0.5rem 0;
+}
+
+.rating span {
+	margin: 0.1rem;
+}
+
+.spinner {
+	--radius: 40px;
+	--radius-half: calc(var(--radius) / 2);
+	--radius-neg: calc(-1 * var(--radius));
+	--part-dist: calc(var(--radius-neg) / 0.5543);
+	--part-size: 30px;
+	background: rgb(248, 235, 235);
+	width: var(--part-size);
+	height: var(--part-size);
+	border-radius: 50%;
+	position: relative;
+	animation: spinner-anim;
+	animation-timing-function: linear;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	margin-left: 50%;
+	margin-top: 15%;
+}
+
+.spinner::after,
+.spinner::before {
+	--angle: 30deg;
+	content: '';
+	background: inherit;
+	width: inherit;
+	height: inherit;
+	border-radius: 50%;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	animation: spinner-part-anim;
+	animation-timing-function: inherit;
+	animation-duration: inherit;
+	animation-iteration-count: inherit;
+}
+
+.spinner::before {
+	--angle: -30deg;
+}
+
+@keyframes spinner-anim {
+	from {
+		transform: rotate(0deg) translateX(var(--radius));
+		opacity: 1;
+	}
+	25% {
+		transform: rotate(720deg) translateX(0);
+		opacity: 0;
+	}
+	50% {
+		transform: rotate(0deg) translateX(var(--radius));
+		opacity: 1;
+	}
+	75% {
+		transform: rotate(-720deg) translateX(0);
+		opacity: 0;
+	}
+	to {
+		transform: rotate(0deg) translateX(var(--radius));
+		opacity: 1;
+	}
+}
+
+@keyframes spinner-part-anim {
+	from {
+		transform: rotate(var(--angle)) translateX(var(--part-dist));
+	}
+	25% {
+		transform: rotate(var(--angle)) translateX(0);
+	}
+	50% {
+		transform: rotate(var(--angle)) translateX(var(--part-dist));
+	}
+	75% {
+		transform: rotate(var(--angle)) translateX(0);
+	}
+	to {
+		transform: rotate(var(--angle)) translateX(var(--part-dist));
+	}
+}
