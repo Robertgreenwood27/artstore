@@ -2,7 +2,6 @@ import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {Container} from 'react-bootstrap'
 import Header from './components/Header'
-import TopFooter from './components/TopFooter'
 import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen'
 import ProductHomeScreen from './screens/ProductHomeScreen'
@@ -26,8 +25,7 @@ import FeatureEditScreen from './screens/FeatureEditScreen'
 import VendorListScreen from './screens/VendorListScreen'
 import VendorEditScreen from './screens/VendorEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
-import ContactScreen from './screens/ContactScreen'
-import AboutScreen from './screens/AboutScreen'
+
 
 
 const App = () => {
@@ -37,9 +35,7 @@ const App = () => {
 				<Header />
 
 				<main className=" maincontainer">
-					<Container>
-						<Route path="/contact" component={ContactScreen} />
-						<Route path="/about" component={AboutScreen} />
+					<Container>	
 						<Route path="/order/:id" component={OrderScreen} />
 						<Route path="/shipping" component={ShippingScreen} />
 						<Route path="/payment" component={PaymentScreen} />
@@ -98,7 +94,6 @@ const App = () => {
 						<Route path="/" component={HomeScreen} exact />
 					</Container>
 				</main>
-				<TopFooter />
 				<Footer />
 			</Router>
 		</>

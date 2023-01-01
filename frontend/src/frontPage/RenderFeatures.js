@@ -4,7 +4,6 @@ import Feature from '../components/Feature'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import {listFeatures} from '../actions/featureActions'
-import Divider from '../components/Divider'
 import {Col, Row} from 'react-bootstrap'
 
 const RenderFeatures = () => {
@@ -25,12 +24,9 @@ const RenderFeatures = () => {
 				<Message variant="danger">{error}</Message>
 			) : (
 				<>
-					<Divider />
-
-					<Row style={{textAlign: 'center', color: 'white'}}>
-						<h1>Events and Features</h1>
+					<Row noGutters style={{textAlign: 'center', color: 'white'}}>
 						{features.map((feature) => (
-							<Col key={feature._id} sm={12} md={6} lg={4} xl={3}>
+							<Col key={feature._id} sm={12} md={3} lg={3} xl={3}>
 								<Feature feature={feature} />
 							</Col>
 						))}
